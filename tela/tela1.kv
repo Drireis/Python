@@ -1,0 +1,35 @@
+<Tela1>:
+    MDBackdrop:
+        id:backdrop
+        left_action_items: [['menu', lambda x: self.open()]]
+        title: "DESTAQUES"
+        radius_left: "25dp"
+        radius_right: "0dp"
+        header_text: "Galeria"
+
+        MDBackdropBackLayer:
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: True
+                pos_hint: {"center_y": .5}
+        MDBackdropFrontLayer:
+            ScrollView:
+                do_scroll_x: .8
+                do_scroll_y: True
+                pos_hint: {"center_y": .5}
+                ThreeLineAvatarIconListItem:
+                    text: "Three-line item with avatar"
+                    secondary_text: "Secondary text here"
+                    tertiary_text: "fit more text than usual"
+
+                    ImageLeftWidget:
+                        source: "data/logo/kivy-icon-256.png"
+
+                        BoxLayout:
+                            orientation: "vertical"
+                            size: root.width, root.height
+                            padding: 4
+                            spacing: 4
+
+
+
